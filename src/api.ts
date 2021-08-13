@@ -1,4 +1,5 @@
 import axios from "axios";
+import { getEnv } from "./common";
 
 const api =
   <T>(method: "post" | "get", path: string) =>
@@ -9,7 +10,7 @@ const api =
           url: `https://api.vultr.com/v2/${path}`,
           method,
           headers: {
-            Authorization: `Bearer ${process.env.VULTR_API_KEY}`,
+            Authorization: `Bearer ${getEnv("VULTR_API_KEY")}`,
           },
           data,
         })
