@@ -9,3 +9,6 @@ export const getEnv = (matcher: string) => {
     return acc;
   }, {} as Record<string, string>);
 };
+
+export const sleep = (ms: number) =>
+  new Promise((res, rej) => setTimeout(res, ms));

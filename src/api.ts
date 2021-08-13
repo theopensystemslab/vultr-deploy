@@ -21,3 +21,25 @@ const api =
     });
 
 export const createInstance = api<CreateInstance>("post", "instances");
+
+export const getInstance = (id: string) =>
+  api<CreateInstance>("get", `instances/${id}`);
+
+export const createDomain = api<CreateDomain>("post", "domains");
+
+export const createRecord = (domain: string) =>
+  api<CreateRecord>("post", `domains/${domain}/records`);
+
+export const getInstanceIPAddress = async (
+  id: string
+): Promise<string | undefined> => {
+  try {
+    const { instance } = await getInstance(id)();
+    return instance?.main_ip && instance.main_ip !== "0.0.0.0"
+      ? instance.main_ip
+      : undefined;
+  } catch (err) {
+    console.error(err);
+    return undefined;
+  }
+};
