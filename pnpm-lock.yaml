@@ -1,0 +1,36 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@types/node': ^16.6.1
+  '@vultr/vultr-node': ^2.1.1
+  typescript: ^4.3.5
+
+dependencies:
+  '@vultr/vultr-node': 2.1.1
+
+devDependencies:
+  '@types/node': 16.6.1
+  typescript: 4.3.5
+
+packages:
+
+  /@types/node/16.6.1:
+    resolution: {integrity: sha512-Sr7BhXEAer9xyGuCN3Ek9eg9xPviCF2gfu9kTfuU2HkTVAMYSDeX40fvpmo72n5nansg3nsBjuQBrsS28r+NUw==}
+    dev: true
+
+  /@vultr/vultr-node/2.1.1:
+    resolution: {integrity: sha512-3bmKJPLFl1EbPDaBfhTfsI7Bxc7jnRaKAIMhyE6mlwTFM/Jl34MwTBsanBaBVC+jrEA3WKmMczjWkBFG4Qnpgg==}
+    dependencies:
+      node-fetch: 2.6.1
+    dev: false
+
+  /node-fetch/2.6.1:
+    resolution: {integrity: sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==}
+    engines: {node: 4.x || >=6.0.0}
+    dev: false
+
+  /typescript/4.3.5:
+    resolution: {integrity: sha512-DqQgihaQ9cUrskJo9kIyW/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu398C0UxmKSOrPumUzA==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
